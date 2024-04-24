@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Awesome Capacitor App</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/trystyle.css" />
+    <script type="module" src="./js/main.js"></script>
+    <meta name="theme-color" content="#31d53d" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  </head>
+    <body>
+        <!--=============== HEADER ===============-->
+    
+                <div class="nav__menu p-0 m-0 g-0" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class='bx bx-home-alt nav__icon'></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="song.html" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">About</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class='bx bx-briefcase-alt nav__icon'></i>
+                                <span class="nav__name">Portfolio</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contactme" class="nav__link">
+                                <i class='bx bx-message-square-detail nav__icon'></i>
+                                <span class="nav__name">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+        <main>
+            <!--=============== HOME ===============-->
+            <section class="container1 section section__height " id="home">
+                <div class="container position-relative">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators mt-3">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                          <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                  <!-- Card Announcement for Slide 1 -->
+                                  <div class="card text-light position-relative theme">
+                                      <div class="card-body">
+                                          <h5 class="card-title">Announcement 1</h5>
+                                          <p class="card-text">This is the first announcement.</p>
+                                      </div>
+                                      <!-- Dropdown menu positioned relative to the card -->
+                                      <div class="dropdown position-absolute top-0 end-0">
+                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <span class="bi bi-three-dots text-white" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                          <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editModal">Edit</a></li>
+                                          <li><a class="dropdown-item" href="#">Hide</a></li>
+                                        </ul>
+                                      </div>
+                                      
+                                  </div>
+                              </div>
+                              <div class="carousel-item">
+                                <!-- Card Announcement for Slide 1 -->
+                                <div class="card text-light position-relative theme">
+                                    <div class="card-body me-2">
+                                        <h5 class="card-title">Announcement 2</h5>
+                                        <p class="card-text">This is the second announcement.</p>
+                                    </div>
+                                    <!-- Dropdown menu positioned relative to the card -->
+                                    <div class="dropdown position-absolute top-0 end-0">
+                                      <button class="btn " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="bi bi-three-dots text-white" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                      </button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editModal">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Hide</a></li>
+                                      </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                              <!-- Card Announcement for Slide 1 -->
+                              <div class="card text-light position-relative theme">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Updates 1</h5>
+                                      <p class="card-text">This is the first update.</p>
+                                  </div>
+                                  <!-- Dropdown menu positioned relative to the card -->
+                                  <div class="dropdown position-absolute top-0 end-0">
+                                    <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <span class="bi bi-three-dots text-white" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Toggle Dropdown</span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editModal">Edit</a></li>
+                                      <li><a class="dropdown-item" href="#">Hide</a></li>
+                                    </ul>
+                                  </div>
+                                  
+                              </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev position-absolute top-50 start-0 translate-middle-y" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="bi bi-chevron-left" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next position-absolute top-50 end-0 translate-middle-y" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="bi bi-chevron-right" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                  </div>
+
+                  <div class="container mt-5">
+                    <span class="text-dark px-2 rounded bg-light"><b>Manage Task</b></span>
+                    
+                  </div>
+                    <!--Setting-->
+                    <div class="container mt-3">
+                      <div class="row ">
+                          <!-- Setting Schedule Card -->
+                          <div class="col-lg-6">
+                            <a href="tryschedule.html" class="text-decoration-none text-black">
+                              <div class="card mb-3 tabs cardtask">
+                                  <div class="row g-0 
+                                  " style="height: 80px">
+                                      <div class="col-4 d-flex align-items-center justify-content-center rounded theme">
+                                          <img src="./assets/imgs/Calendar Plus.svg" class="img-fluid rounded-start" alt="Schedule Icon">
+                                      </div>
+                                      <div class="col-8">
+                                          <div class="card-body d-flex align-items-center " style="height: 100%;">
+                                              <h6 class="card-title">Set Schedule</h6>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </a>
+                          </div>
+                  
+                  
+                          <!-- Setting Attendance Card -->
+                          <div class="col-lg-6">
+                              <div class="card mb-3 tabs cardtask">
+                                  <div class="row g-0 
+                                  " style="height: 80px">
+                                      <div class="col-4 d-flex align-items-center justify-content-center rounded theme">
+                                          <img src="./assets/imgs/Attendance.svg" class="img-fluid rounded-start" alt="Attendance Icon">
+                                      </div>
+                                      <div class="col-8">
+                                          <div class="card-body d-flex align-items-center" style="height: 100%;">
+                                              <h6 class="card-title">Attendance</h6>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </section>
+
+            <!--=============== ABOUT ===============-->
+            <section class="container section section__height" id="about">
+                <h2 class="section__title">About</h2>
+            </section>
+
+            
+
+            <!--=============== PORTFOLIO ===============-->
+            <section class="container section section__height" id="portfolio">
+                <h2 class="section__title">Portfolio</h2>
+            </section>
+
+            <!--=============== CONTACTME ===============-->
+            <section class="container section section__height" id="contactme">
+                <h2 class="section__title">Contactme</h2>
+            </section>
+        </main>
+        
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Edit Card Content</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="editForm">
+                  <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title">
+                  </div>
+                  <div class="mb-3">
+                    <label for="body" class="form-label">Body</label>
+                    <textarea class="form-control" id="body" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="./js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+          const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 50,
+            sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader(){
+    const header = document.getElementById('header')
+    // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
+    if(this.scrollY >= 80) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+        </script>
+    </body>
+    
+  
+</html>

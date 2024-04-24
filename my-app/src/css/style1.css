@@ -1,0 +1,71 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  
+}
+
+
+.weekdays{
+  margin: 0;
+  padding: 10px 0;
+}
+
+.weekdays li{
+  display:inline-block;
+  width: 12.5%;
+  text-align: center;
+}
+
+#back_up{
+  height: 100px;
+  width: 55px;
+  left: 200px;
+  bottom: 70px;
+  position:absolute;
+}
+
+
+
+#musicians{
+  padding: 0;
+  margin-top: 10px;
+
+}
+
+.button_test{
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+
+
+
+#row{
+  background-color: #150F28;
+}
+
+#background{
+  background-image: linear-gradient(rgb(21, 15, 40),rgb(35,107,114));
+  height: 60rem;
+}
+
+#title{
+  background-image: linear-gradient(rgb(21,15,40),rgb(54,143,138));
+  height: 50px;
+  top: 50px;
+  position: relative;
+  width: 140px;
+  left: 38.5px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+#row{
+  background-image: linear-gradient(rgb(54,143,138),rgb(21,15,40));
+}
+
+size{
+  height: 80%;
+}

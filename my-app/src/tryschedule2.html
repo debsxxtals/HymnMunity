@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Awesome Capacitor App</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style1.css" />
+
+    <script type="module" src="./js/main.js"></script>
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body id="background">
+    <div id="title">
+      <h4 class="display-4">Schedule</h4>
+    </div>
+    <div class="container d-flex justify-content-center mt-5">
+      <div id="row" class="row bg-secondary">
+        <div class="col-sm-4 mb-4">
+          <p class="text-start m-1 p-1"><b>Date:</b></p>
+          <div id="day">
+            <p class="m-1 p-1"><b>Day:</b></p>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <label for="song_leader"><b>Song Leader:</b></label>
+              <select name="song_leader" id="song_leader">
+              </select>
+              <hr>
+              <label for="media"><b>Media:</b></label>
+              <select name="media" id="media">
+              </select>
+              <div id="musicians">
+                <hr>
+              <p><b>Musician:</b></p>
+              <label for="guitarist"><b>Guitarist:</b></label>
+              <select name="guitarist" id="guitarist"></select>
+              <br><label for="bassist"><b>Bassist</b></label>
+              <select name="bassist" id="bassist"></select>
+              <br><label for="keyboardrist"><b>Keyboardrist</b></label>
+              <select name="keyboardrist" id="keyboardrist"></select>
+              <br><label for="drummer"><b>Drummer:</b></label>
+              <select name="drummer" id="drummer"></select>
+              </div>
+              <div id="line">
+
+              </div>
+              <div id="back_up"> 
+                <p>Backup Singers</p>
+                <hr>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="button_test">New</button>
+    <script src="./js/capacitor-welcome.js" type="module"></script>
+  </body>
+</html>

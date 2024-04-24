@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  
+}
+
+body{
+  background: #150F28 !important;
+  
+}
+.carousel-item .card {
+  height: 200px; /* Set the height of the card */
+}
+
+.carousel-item .card{
+  flex-direction: column;
+  align-items: center;
+  
+}
+.card .card-body{
+  width: 80%;
+}
+
+.bi-three-dots {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+
+
+.theme{
+  background: #236B72 !important;
+}
+
+.dark{
+  background: #150F28 !important;
+  
+}
+
+.bdr {
+  border-radius: 200px !important;
+}
+
+nav{
+  background: whitesmoke !important;
+  height: 50px;
+  backdrop-filter: blur(10px) !important;
+
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.cardtask:hover {
+  transform: scale(1.02);
+}
+
+
+.card{
+  border: none;
+}
+
+.foreground {
+  backdrop-filter: blur(0.8);
+ } 
+
+
+ .light{
+  background: #368F8A !important;
+}
+
+
+tr {
+  border-bottom: 1px solid #368F8A !important;
+
+}
+
+th, td {
+  padding: 8px 0px 8px 0px;
+}
+
+td{
+  /* Display td elements inline */
+  overflow: hidden; /* Hide content if it overflows the cell */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Awesome Capacitor App</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/trystyle.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body class="bodys">
+    
+
+    <br>
+  
+
+    <div class="container d-flex align-items-center justify-content-between  text-light">
+      <a href="dashboard.html" class="btn-link">
+        <button class="btn" type="button">
+          <i class='bx bx-arrow-back nav__icon text-dark' ></i>
+        </button>
+
+      </a>
+      <div class="dropdown">
+        <a class="btn theme btn-sm dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         Select filter
+        </a>
+      
+        <ul class="dropdown-menu dropdown-menu-light">
+          <li><a class="dropdown-item" href="#wednesday">WEDNESDAY</a></li>
+          <li><a class="dropdown-item" href="#morning">SUNDAY MORNING</a></li>
+          <li><a class="dropdown-item" href="#evening">SUNDAY EVENING</a></li>
+        </ul>
+      </div>
+  </div>
+<br>
+
+
+    <div class="container position-relative overlay ">
+      <div class="row ">
+        <div class="col-md-6 " id="wednesday">
+
+          <div class="card theme text-light m-2 " >
+              <div class="card-header d-flex align-items-center justify-content-between d-inline"> Jan 1, 2024 <div> <span>| </span>  WEDNESDAY </div> </div>
+              <div class="card-body ">
+                <div class="card p-2 small">
+    
+                  <span class="card-text"><b>Song Leader : </b><span>Allan</span></span>
+                  <span class="card-text"><b>Media : </b><span>Aila</span></span>
+                  <hr>
+                  <div class="row d-flex justify-content-center align-items-center">
+                  <div class="col-8 ">
+                  <span class="card-text mb-2 "><b>Musician : </b></span>
+                  <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>DJ</span></p>
+                  <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>Jefte</span></p>
+                  <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>Erika</span></p>
+                  <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>Ephraim</span></p>
+                  </div>
+                 <div class="col-4 mycontent">
+                  <span class="card-text mb-2 "><b>Back-up</b></span>
+                  <p class="card-text ms-2 mb-0">DJ</p>
+                  <p class="card-text ms-2 mb-0">Jefte</p>
+                  <p class="card-text ms-2 mb-0">Erika</p>
+                  <p class="card-text ms-2 mb-0">Rovic</p>
+                 </div>
+                </div>
+                 
+                </div> 
+              </div>
+        </div>
+          </div>
+        <div class="col-md-6 " id="morning">
+          <div class="card theme text-light m-2 " >
+            <div class="card-header d-flex align-items-center justify-content-between d-inline"> Jan 1, 2024 <div> <span>| </span>  SUNDAY MORNING </div> </div>
+            <div class="card-body ">
+              <div class="card p-2 small">
+  
+                <span class="card-text"><b>Song Leader : </b><span>Allan</span></span>
+                <span class="card-text"><b>Media : </b><span>Aila</span></span>
+                <hr>
+                <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-8 ">
+                <span class="card-text mb-2 "><b>Musician : </b></span>
+                <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>DJ</span></p>
+                <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>Jefte</span></p>
+                <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>Erika</span></p>
+                <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>Ephraim</span></p>
+                </div>
+               <div class="col-4 mycontent">
+                <span class="card-text mb-2 "><b>Back-up</b></span>
+                <p class="card-text ms-2 mb-0">DJ</p>
+                <p class="card-text ms-2 mb-0">Jefte</p>
+                <p class="card-text ms-2 mb-0">Erika</p>
+                <p class="card-text ms-2 mb-0">Rovic</p>
+               </div>
+              </div>
+               
+              </div> 
+            </div>
+      </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-6" id="evening">
+
+          <div class="card theme text-light m-2 " >
+              <div class="card-header d-flex align-items-center justify-content-between d-inline"> Jan 1, 2024 <div> <span>| </span>  SUNDAY EVENING </div> </div>
+              <div class="card-body ">
+                <div class="card p-2 small">
+    
+                  <span class="card-text"><b>Song Leader : </b><span>Allan</span></span>
+                  <span class="card-text"><b>Media : </b><span>Aila</span></span>
+                  <hr>
+                  <div class="row d-flex justify-content-center align-items-center">
+                  <div class="col-8 ">
+                  <span class="card-text mb-2 "><b>Musician : </b></span>
+                  <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>DJ</span></p>
+                  <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>Jefte</span></p>
+                  <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>Erika</span></p>
+                  <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>Ephraim</span></p>
+                  </div>
+                 <div class="col-4 mycontent">
+                  <span class="card-text mb-2 "><b>Back-up</b></span>
+                  <p class="card-text ms-2 mb-0">DJ</p>
+                  <p class="card-text ms-2 mb-0">Jefte</p>
+                  <p class="card-text ms-2 mb-0">Erika</p>
+                  <p class="card-text ms-2 mb-0">Rovic</p>
+                 </div>
+                </div>
+                 
+                </div> 
+              </div>
+        </div>
+          </div>
+        <div class="col-md-6">
+          <div class="card theme text-light m-2 " id="morning" >
+            <div class="card-header d-flex align-items-center justify-content-between d-inline"> Jan 1, 2024 <div> <span>| </span>  SUNDAY MORNING </div> </div>
+            <div class="card-body ">
+              <div class="card p-2 small">
+  
+                <span class="card-text"><b>Song Leader : </b><span>Allan</span></span>
+                <span class="card-text"><b>Media : </b><span>Aila</span></span>
+                <hr>
+                <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-8 ">
+                <span class="card-text mb-2 "><b>Musician : </b></span>
+                <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>DJ</span></p>
+                <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>Jefte</span></p>
+                <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>Erika</span></p>
+                <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>Ephraim</span></p>
+                </div>
+               <div class="col-4 mycontent">
+                <span class="card-text mb-2 "><b>Back-up</b></span>
+                <p class="card-text ms-2 mb-0">DJ</p>
+                <p class="card-text ms-2 mb-0">Jefte</p>
+                <p class="card-text ms-2 mb-0">Erika</p>
+                <p class="card-text ms-2 mb-0">Rovic</p>
+               </div>
+              </div>
+               
+              </div> 
+            </div>
+      </div>
+        </div>
+      </div>
+        
+
+        
+      
+    </div>
+
+    <button class="btn theme btn-circle m-3 rounded-circle fixed-bottom-right" data-bs-toggle="modal" type="button" data-bs-target="#editModal" title="Add Song">
+      <img src="./assets/icon/Plus Math.svg" class="img-fluid rounded-center text-light" alt="">
+    </button>
+
+    
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Set Schedule</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="editForm">
+              <div class="mb-2">
+                <label for="leader" class="form-label">Song Leader</label>
+                <select class="form-select" aria-label="Default select example" id="leader">
+                  <option selected>Allan</option>
+                  <option value="1">Edwin</option>
+                  <option value="2">Jonard</option>
+                  <option value="3">Ednor</option>
+                </select>
+                
+              </div>
+              
+              <div class="mb-2">
+                <label for="media" class="form-label">Musician</label>
+                <select class="form-select mb-1" aria-label="Default select example" placeholder="Guitarist">
+                  <option selected>Guitarist</option>
+                  <option value="1">Aila</option>
+                  <option value="2">Dina</option>
+                  <option value="3">Deborah</option>
+                  <option value="4">Keziah</option>
+                </select>
+
+                <select class="form-select mb-1" aria-label="Default select example" placeholder="Bassist">
+                  <option selected>Bassist</option>
+                  <option value="1">Aila</option>
+                  <option value="2">Dina</option>
+                  <option value="3">Deborah</option>
+                  <option value="4">Keziah</option>
+                </select>
+
+                <select class="form-select mb-1" aria-label="Default select example" placeholder="">
+                  <option selected>Keyboardist</option>
+                  <option value="1">Aila</option>
+                  <option value="2">Dina</option>
+                  <option value="3">Deborah</option>
+                  <option value="4">Keziah</option>
+                </select>
+
+                <select class="form-select mb-1 " aria-label="Default select example" placeholder="">
+                  <option selected>Drummer</option>
+                  <option value="1">Aila</option>
+                  <option value="2">Dina</option>
+                  <option value="3">Deborah</option>
+                  <option value="4">Keziah</option>
+                </select>
+                
+              </div>
+              <div class="mb-3">
+                <label for="title" class="form-label">Back-up Singers : </label>
+                <input type="text" class="form-control mb-1">
+                <input type="text" class="form-control mb-1">
+                <input type="text" class="form-control mb-1">
+                <input type="text" class="form-control mb-1">
+              </div>
+              
+              <button type="submit" class="btn theme text-light">Add Schedule</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+      
+      
+          
+
+
+
+
+
+    
+  
+
+    <script src="./js/capacitor-welcome.js" type="module"></script>
+  </body>
+</html>

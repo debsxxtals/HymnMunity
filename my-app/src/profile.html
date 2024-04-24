@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Awesome Capacitor App</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/trystyle.css" />
+    <script type="module" src="./js/main.js"></script>
+    <meta name="theme-color" content="#31d53d" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+ <body>
+  <div class="nav__menu p-0 m-0 g-0 fixed-bottom" id="nav-menu">
+    <ul class="nav__list">
+        <li class="nav__item">
+            <a href="dashboard.html" class="nav__link">
+              <i class='bx bxs-dashboard nav__icon'></i>
+                <span class="nav__name">Dashboard</span>
+            </a>
+        </li>
+        
+        <li class="nav__item">
+            <a href="song.html" class="nav__link">
+              <i class='bx bxs-playlist nav__icon'></i>
+                <span class="nav__name">Songs</span>
+            </a>
+        </li>
+
+
+        <li class="nav__item">
+            <a href="chatbox.html" class="nav__link">
+              <i class='bx bx-conversation nav__icon'></i>
+                <span class="nav__name">Chatbox</span>
+            </a>
+        </li>
+
+        <li class="nav__item">
+            <a href="#" class="nav__link active-link">
+              <i class='bx bxs-user nav__icon'></i>
+                <span class="nav__name">Profile</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<nav class="navbar navbar-light dark fixed-top mt-2">
+  <div class="container">
+    <a class="navbar-brand" href="#"><h3 class="mb-0 text-dark"><b>PROFILE</b></h3>  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <img src="./assets/icon/Menud.svg" class="img-fluid rounded-start text-dark" alt="Settings Icon">
+    </button>
+    <div class="offcanvas offcanvas-end dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-secondary mb-0" id="offcanvasDarkNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+      </div>
+      <hr class="mt-0">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-dark">
+          <li class="nav-item">
+            <a class="nav-link text-dark" aria-current="page" href="dashboard.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-dark" aria-current="page" href="#" >About</a>
+          </li>
+          <li class="nav-item my-3 ">
+            <a class="nav-link  text-dark" href="#" data-bs-toggle="modal" data-bs-target="#logout">Log out</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!--End of Navbar-->
+<br>
+ 
+
+<div class="container d-flex align-items-center justify-content-between mb-2 text-dark mt-2">
+      <h3 class="mb-0 "><b>DASHBOARD</b></h3>
+      <img src="./assets/imgs/Doorbell.svg" class="img-fluid rounded-start text-dark" alt="Notification Icon">
+  </div>
+
+<div class="container d-flex justify-content-center  ">
+
+  <div class="card1 p-3">
+
+      <div class="d-flex align-items-center">
+
+          <div class="image">
+      <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="125" height="150">
+      </div>
+
+      <div class="ml-3 w-100 ms-3">
+          
+         <h6 class="mb-0 mt-0 text-dark mb-2"><strong> Deborah Talaba</strong></h6>
+         <span class="post rounded text-light"><span class="mx-1"> Media Team</span></span><br>
+         <span class="text-dark"><small class="mx-1"> (Deb)</small></span>
+
+         
+
+
+
+      </div>
+
+      
+
+          
+      </div>
+      
+  </div>
+   
+</div>
+
+
+<div class="container-fluid  mt-4 mb-4 d-flex justify-content-center overlay "> 
+  <div class="card p-4 theme text-light " style="width: 100%;"> 
+    <h6>ABOUT ME</h6>
+    <div class="card p-3">
+      <p  class="card-title fw-bold mb-2 mt-1">Contact Info :</p>
+      
+        <span class="p-1"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="card-text ms-2"> : example@email.com</span></span>
+        <span class="p-1"><i class="fa fa-phone" aria-hidden="true"></i><span class="card-text ms-2"> : +639123456789 </span></span>
+
+      <p  class="card-title fw-bold mb-2 mt-3">Place :</p>
+      
+        <span class="p-1"><i class="fa fa-map-marker" aria-hidden="true"></i> <span class="card-text ms-2"> : Washington D.C. USA</span></span>
+        
+
+    </div>
+    <br>
+    <br>
+    <br>
+      </div>
+</div>
+
+<!-- Modal for editing card content -->
+<div class="modal fade " id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Edit Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editForm">
+          <div class="mb-3">
+            <label for="profile" class="form-label">Change profile picture</label>
+            <input type="file" accept="image/*" name="file" class="form-control" id="profile"/>
+          </div>
+          <div class="mb-3">
+            <label for="nickname" class="form-label">Nickname</label>
+            <input type="text" class="form-control" id="nickname">
+          </div>
+          <div class="mb-3">
+            <label for="body" class="form-label">About me</label>
+            <textarea class="form-control" id="body" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn text-light theme">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1"  id="logout">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Logging out...</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to log out?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="index.html"><button type="button" class="btn theme text-light">Agree</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+ </body>
+</html>

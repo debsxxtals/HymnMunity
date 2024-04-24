@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Awesome Capacitor App</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+
+    <script type="module" src="./js/main.js"></script>
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body>
+  <div class="container size">
+    <form class="mx-auto mt-5 mb-5" method="post">
+
+      <div class="d-flex mx-auto justify-content-start">
+      <a href="index.html" class="btn-link">
+        <button class="btn text-light" type="button">
+          <i class='bx bx-arrow-back nav__icon text-light' ></i>
+          Back
+        </button>
+      </a>
+      </div>
+
+      <h4 class="text-center text-light border-bottom p-3">Register</h4>
+
+      <div class="content">
+
+        <div class="input-box">
+          <label for="name">First Name</label>
+          <input type="name" placeholder="Enter full name" name="name" required>
+        </div>
+
+        <div class="input-box">
+          <label for="username">Last Name</label>
+          <input type="name" placeholder="Enter username" name="username" required>
+        </div>
+
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter your email address" name="email" required>
+        </div>
+
+        <div class="input-box">
+         <label for="phone">Phone Number</label>
+         <input type="number" placeholder="Enter your phone number" id="phone" required>
+        </div>
+
+        <div class="input-box">
+         <label for="password">Password</label>
+         <input type="password" placeholder="Enter new password" id="password" required>
+        </div>
+
+        <div class="input-box">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" placeholder="Password" id="confirmPassword" required>
+        </div>
+      </div>
+        
+        <div class="alert p-0 mt-1">
+          <p>By clicking Register, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a>
+            and <a href="#">Cookies Policy</a>.
+          </p>
+        </div>
+
+       
+
+        
+      <div class="button">     
+        <a href="dashboard.html">
+          <button type="button" class="btn theme text-light mb-4">Register</button>      
+        </a> 
+     </div>     
+    
+
+     
+    </form>
+    
+  </div>
+    <script src="js/main.js"></script>
+    <script src="./js/capacitor-welcome.js" type="module"></script>
+  </body>
+</html>

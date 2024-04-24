@@ -1,0 +1,564 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem !important;
+
+  /*========== Colors ==========*/
+  --hue: 174 !important;
+  --sat: 63% !important;
+  --first-color: hsl(var(--hue), var(--sat), 40%) !important;
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%) !important;
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Open Sans', sans-serif !important;
+  --h1-font-size: 1.5rem !important;
+  --normal-font-size: .938rem !important;
+  --tiny-font-size: .625rem !important;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10 !important;
+  --z-fixed: 100 !important;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem !important;
+    --normal-font-size: 1rem !important;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box !important;
+  padding: 0;
+  margin: 0 ;
+}
+
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: var(--header-height) 0 0 0 !important;
+  font-family: var(--body-font) !important;
+  font-size: var(--normal-font-size) !important;
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 4.5rem 0 2rem !important;
+}
+
+.section__title {
+  font-size: var(--h1-font-size) !important;
+  color: var(--title-color);
+  text-align: center !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.section__height {
+  height: 100vh !important;
+}
+
+/*=============== LAYOUT ===============*/
+.container1 {
+  max-width: 968px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*=============== HEADER ===============*/
+
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.nav__img {
+  width: 32px !important;
+  border-radius: 50% !important;
+}
+
+.nav__logo {
+  color: var(--title-color) !important;
+  font-weight: 600 !important;
+}
+
+
+  .nav__menu {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background-color: var(--container-color) !important;
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15) !important;
+    width: 100% !important;
+    height: 4rem !important;
+    padding: 0 1rem !important; 
+    display: grid !important;
+    align-content: center !important;
+    border-radius: 1.25rem 1.25rem 0 0 !important;
+    transition: .4s !important;
+  }
+
+
+.nav__list, 
+.nav__link {
+  display: flex !important;
+  
+}
+
+.nav__link {
+  flex-direction: column !important;
+  align-items: center !important;
+  row-gap: 4px !important;
+  color: var(--title-color) !important;
+  font-weight: 600 !important;
+}
+
+.nav__list {
+  justify-content: space-around !important;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size) !important;
+  /* display: none;*/ /* Minimalist design, hidden labels */
+}
+
+.nav__icon {
+  font-size: 1.5rem !important;
+}
+
+/*Active link*/
+.active-link {
+  position: relative !important;
+  color: var(--first-color) !important;
+  transition: .3s !important;
+}
+
+/* Minimalist design, active link */
+/* .active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+} */
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15) !important;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+
+
+/* For medium devices */
+@media screen and (min-width: 1024px) {
+  .nav__list {
+    justify-content: center !important;
+    column-gap: 3rem !important;
+    ;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 7rem 0 2rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem) !important; /* 4.5rem */
+  }
+  .nav__img {
+    display: none;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__name {
+    font-size: var(--normal-font-size) !important;
+    /* display: block; */ /* Minimalist design, visible labels */
+  }
+  .nav__link:hover {
+    color: var(--first-color) !important;
+  }
+
+  /* First design, remove if you choose the minimalist design */
+  .active-link::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -.75rem !important;
+    width: 4px !important;
+    height: 4px !important;
+    background-color: var(--first-color) !important;
+    border-radius: 50% !important;
+  }
+
+  /* Minimalist design */
+  /* .active-link::before{
+      bottom: -.75rem;
+  } */
+}
+
+/* For large devices */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+html,
+body {
+  padding: 0 ;
+  margin: 0 !important;
+  height: 100% !important;
+  
+}
+
+body{
+  background: #b0e0e6 !important;
+  
+}
+
+.lightmode{
+  background: #b0e0e6 !important;
+
+}
+.carousel-item .card {
+  height: 200px !important; /* Set the height of the card */
+}
+
+.carousel-item .card{
+  flex-direction: column !important;
+  align-items: center !important;
+  
+}
+.card .card-body{
+  width: 80% !important;
+}
+
+.bi-three-dots {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.textd{
+  color: #000 !important;
+}
+
+.theme{
+  background: #236B72 !important;
+}
+
+.dark{
+  background: #b0e0e6 !important;
+  
+}
+.dark1{
+  background: #150F28 !important;
+  
+}
+
+
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.cardtask:hover {
+  transform: scale(1.02);
+}
+
+
+.card{
+  border: none;
+}
+
+.foreground {
+  backdrop-filter: blur(0.8);
+ } 
+
+
+ .light{
+  background: #368F8A !important;
+}
+
+
+tr {
+  border-bottom: 1px solid #368F8A !important;
+
+}
+
+th, td {
+  padding: 8px 0px 8px 0px;
+}
+
+td{
+  /* Display td elements inline */
+  overflow: hidden; /* Hide content if it overflows the cell */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.fixed{
+  position: sticky !important;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+thead th {
+  color: #000000;
+}
+
+.card {
+  border-radius: .5rem !important;
+}
+
+.table-scroll {
+  border-radius: .5rem !important;
+}
+
+.table-scroll table thead th {
+  font-size: 1.25rem !important;
+}
+thead {
+  top: 0 !important;
+  position: sticky !important;
+}
+
+.btn-circle {
+  width: 45px !important;
+  height: 45px !important;
+  line-height: 45px !important; 
+  text-align: center !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  position: fixed !important;
+  z-index: 1000 !important;
+  
+}
+
+.btn-circle img {
+  position: relative !important;
+  top: -1px !important;
+}
+
+tbody {
+  max-height: calc(100% - 60px) !important; /* Subtracting the height of the fixed button */
+  overflow-y: auto !important;
+}
+
+body {
+  height: 100% !important;
+  overflow: hidden !important;
+  
+}
+
+.overlay {
+  overflow-y: auto !important; /* or overflow-y: auto; */
+  /* Other styling properties as needed */
+}
+
+/*chat*/
+#chat2 .form-control {
+  border-color: transparent !important;
+  }
+  
+  #chat2 .form-control:focus {
+  border-color: transparent !important;
+  box-shadow: inset 0px 0px 0px 1px transparent !important;
+  }
+  
+  .divider:after,
+  .divider:before {
+  content: "" !important;
+  flex: 1 !important;
+  height: 1px !important;
+  background: #eee !important;
+  }
+
+
+  a.nav-link {
+    color: gray;
+    font-size: 18px;
+    padding: 0;
+}
+
+.avatar {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    border: 2px solid #e84118;
+    padding: 2px;
+    flex: none;
+}
+
+input:focus {
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.card-text1 {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.card .body{
+  width: 100% !important;
+}
+
+
+
+
+.container .card1{
+width: 100%;
+border: none;
+border-radius: 10px;
+background-color: #fff#236B72 !important;
+}
+
+
+
+.stats{
+
+    background: #f2f5f8 !important;
+
+  color: #000 !important;
+}
+.articles{
+font-size:10px;
+color: #a1aab9;
+}
+.number1{
+font-weight:500;
+}
+.followers{
+  font-size:10px;
+color: #a1aab9;
+
+}
+.number2{
+font-weight:500;
+}
+.rating{
+  font-size:10px;
+color: #a1aab9;
+}
+.number3{
+font-weight:500;
+}
+
+.post{
+  background-color: #236B72;
+  
+  
+}
+body .container-fluid{
+  width: 100%;
+  padding: 0;
+  height: auto;
+  
+
+}
+
+/*f*/
+#background{
+  background-color: rgb(35,107,114);
+  height: 60rem;
+}
+
+a {
+  text-decoration: none !important;
+  color: antiquewhite;
+  }
+#button{
+  background-color: rgb(21, 15, 40);
+  color:antiquewhite ;
+}
+
+#dropdown{
+  background-color: rgb(21, 15, 40);
+  color:antiquewhite ;
+}
+
+#card{
+  background-color: rgb(21, 15, 40);
+  color:antiquewhite 
+}
+
+section .container1{
+  width: 70% !important;
+}
+
+.card .card-body{
+  width: 100% !important;
+}
+
+.font {
+  font-size: 1rem;
+}
+
+.mycontent {
+  border-left: 2px solid #333 !important;
+}
+
+.bodys{
+  min-height: 100% !important;
+  overflow-y: auto !important;
+}
+.fixed-bottom-right {
+  position: fixed !important;
+  bottom: 20px; /* adjust as needed */
+  right: 20px; /* adjust as needed */
+}
+
+.fixed-bottom-right1 {
+  position: fixed !important;
+  bottom: 80px; /* adjust as needed */
+  right: 20px;
+   /* adjust as needed */
+}
+
+.table-body-scrollable {
+  max-height: 300px !important; /* Set a maximum height for the scrollable table body */
+  overflow-y: auto !important; /* Allow vertical scrolling */
+}
+
+.textdr{
+  color: #000 !important;
+}
+
