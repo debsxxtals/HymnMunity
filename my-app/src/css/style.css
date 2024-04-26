@@ -1,11 +1,15 @@
 
+:root{
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 
 html,
 
 *{
   padding: 0%;
   margin: 0%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--bs-font-sans-serif) !important;
   box-sizing: border-box;
 }
 body {
@@ -13,9 +17,9 @@ body {
   justify-content: center;
   height: 100vh;
   background: linear-gradient(180deg, #150F28 35%, #150F28 100%);
-  font-family: 'Open Sans',sans-serif !important;
   height: 100% !important;
   overflow: auto !important;
+  
   
 }
 
