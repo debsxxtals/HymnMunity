@@ -18,6 +18,8 @@ btn_logout.onclick = async () => {
         errorNotification("Logout Failed", 15);
     }
 
+    
+
 
     
 }

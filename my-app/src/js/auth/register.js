@@ -9,8 +9,8 @@ register.onsubmit = async (e) => {
     document.querySelector("#register button").disabled = true;
     document.querySelector(
       "#register button"
-    ).innerHTML = `<div class="spinner-border me-2" role="status">
-                      </div>
+    ).innerHTML = `<div class="spinner-border  me-2" role="status">
+    </div>
                       <span>Loading...</span>`;
 
     //get all values from input, select, textarea form tag
@@ -31,7 +31,7 @@ register.onsubmit = async (e) => {
         if (user_id != null) {
             
             const { data, error } = await supabase
-                .from('profile')
+                .from('profiles')
                 .insert([
                     {
                         first_name: formData.get("first_name"), last_name: formData.get("last_name"),
@@ -58,7 +58,17 @@ register.onsubmit = async (e) => {
         
         }
         
-    } 
+    } else {
+       // Show password mismatch error
+       errorNotification("Passwords do not match.", 10);
+       // Reset only password and password_confirmation fields
+       register.querySelector("input[name=password]").value = "";
+       register.querySelector("input[name=password_confirmation]").value = "";
+       // Enable submit button and reset its content
+       document.querySelector("#register button").disabled = false;
+       document.querySelector("#register button").innerHTML = `Register`;
+                
+    }
     
     
     

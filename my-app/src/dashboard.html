@@ -24,11 +24,14 @@
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/trystyle.css" />
     <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/system/dashboard.js"></script>
     <meta name="theme-color" content="#31d53d" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
   </head>
+
   
   <body>
     
@@ -121,7 +124,7 @@
                     </div>
                     <!-- Dropdown menu positioned relative to the card -->
                     <div class="dropdown position-absolute top-0 end-0">
-                      <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="btn adminButton" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="bi bi-three-dots text-white" aria-hidden="true"></span>
                         <span class="visually-hidden">Toggle Dropdown</span>
                       </button>
@@ -142,7 +145,7 @@
                   </div>
                   <!-- Dropdown menu positioned relative to the card -->
                   <div class="dropdown position-absolute top-0 end-0">
-                    <button class="btn " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn adminButton" type="button"  data-bs-toggle="dropdown" aria-expanded="false" >
                       <span class="bi bi-three-dots text-white" aria-hidden="true"></span>
                       <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
@@ -163,7 +166,7 @@
                 </div>
                 <!-- Dropdown menu positioned relative to the card -->
                 <div class="dropdown position-absolute top-0 end-0">
-                  <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn adminButton" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="bi bi-three-dots text-white" aria-hidden="true"></span>
                     <span class="visually-hidden">Toggle Dropdown</span>
                   </button>
@@ -284,11 +287,11 @@
         <form id="editForm">
           <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title">
+            <input type="text" class="form-control" id="title" name="title">
           </div>
           <div class="mb-3">
             <label for="body" class="form-label">Body</label>
-            <textarea class="form-control" id="body" rows="3"></textarea>
+            <textarea class="form-control" id="body" rows="3" name="body"></textarea>
           </div>
           <button type="submit" class="btn theme text-light">Save Changes</button>
         </form>

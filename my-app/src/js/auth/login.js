@@ -30,13 +30,13 @@ form_login.onsubmit = async (e) => {
         localStorage.setItem("refresh_token", session.refresh_token);
 
         
-        let { data: profile, error } = await supabase
-            .from("profile")
+        let { data: profiles, error } = await supabase
+            .from("profiles")
             .select("*")
             .eq("auth_id", user.id);
         
-        console.log(profile);
-        localStorage.setItem("is_admin", profile.is_admin);
+        console.log(profiles);
+        localStorage.setItem("role", profiles[0].role);
     
 
     }

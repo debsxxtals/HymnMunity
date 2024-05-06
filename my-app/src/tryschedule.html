@@ -23,7 +23,7 @@
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/trystyle.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
+    <script type="module" src="./js/system/schedule.js"></script>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/system/schedule.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -56,142 +56,32 @@
   </div>
 <br>
 
-
-    <div class="container position-relative overlay ">
-      <div class="row ">
-        <div class="col-md-6 " id="wednesday">
-
-          <div class="card theme text-light m-2 " >
-              <div class="card-header d-flex align-items-center justify-content-between d-inline"> Jan 1, 2024 <div> <span>| </span>  WEDNESDAY </div> </div>
-              <div class="card-body ">
-                <div class="card p-2 small">
-    
-                  <span class="card-text"><b>Song Leader : </b><span>Allan</span></span>
-                  <span class="card-text"><b>Media : </b><span>Aila</span></span>
-                  <hr>
-                  <div class="row d-flex justify-content-center align-items-center">
-                  <div class="col-8 ">
-                  <span class="card-text mb-2 "><b>Musician : </b></span>
-                  <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>DJ</span></p>
-                  <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>Jefte</span></p>
-                  <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>Erika</span></p>
-                  <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>Ephraim</span></p>
-                  </div>
-                 <div class="col-4 mycontent">
-                  <span class="card-text mb-2 "><b>Back-up</b></span>
-                  <p class="card-text ms-2 mb-0">DJ</p>
-                  <p class="card-text ms-2 mb-0">Jefte</p>
-                  <p class="card-text ms-2 mb-0">Erika</p>
-                  <p class="card-text ms-2 mb-0">Rovic</p>
-                 </div>
-                </div>
-                 
-                </div> 
-              </div>
-        </div>
-          </div>
-        <div class="col-md-6 " id="morning">
-          <div class="card theme text-light m-2 " >
-            <div class="card-header d-flex align-items-center justify-content-between d-inline"> Jan 1, 2024 <div> <span>| </span>  SUNDAY MORNING </div> </div>
-            <div class="card-body ">
-              <div class="card p-2 small">
+<!--Alert notification-->
+<div class="alert alert-success d-none" role="alert">
+                      
+</div>
+<div class="alert alert-danger d-none" role="alert">
   
-                <span class="card-text"><b>Song Leader : </b><span>Allan</span></span>
-                <span class="card-text"><b>Media : </b><span>Aila</span></span>
-                <hr>
-                <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-8 ">
-                <span class="card-text mb-2 "><b>Musician : </b></span>
-                <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>DJ</span></p>
-                <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>Jefte</span></p>
-                <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>Erika</span></p>
-                <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>Ephraim</span></p>
-                </div>
-               <div class="col-4 mycontent">
-                <span class="card-text mb-2 "><b>Back-up</b></span>
-                <p class="card-text ms-2 mb-0">DJ</p>
-                <p class="card-text ms-2 mb-0">Jefte</p>
-                <p class="card-text ms-2 mb-0">Erika</p>
-                <p class="card-text ms-2 mb-0">Rovic</p>
-               </div>
-              </div>
-               
-              </div> 
-            </div>
-      </div>
-        </div>
-      </div>
+</div>
 
-      <div class="row mt-2">
-        <div class="col-md-6" id="evening">
 
-          <div class="card theme text-light m-2 " >
-              <div class="card-header d-flex align-items-center justify-content-between d-inline"> Jan 1, 2024 <div> <span>| </span>  SUNDAY EVENING </div> </div>
-              <div class="card-body ">
-                <div class="card p-2 small">
-    
-                  <span class="card-text"><b>Song Leader : </b><span>Allan</span></span>
-                  <span class="card-text"><b>Media : </b><span>Aila</span></span>
-                  <hr>
-                  <div class="row d-flex justify-content-center align-items-center">
-                  <div class="col-8 ">
-                  <span class="card-text mb-2 "><b>Musician : </b></span>
-                  <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>DJ</span></p>
-                  <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>Jefte</span></p>
-                  <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>Erika</span></p>
-                  <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>Ephraim</span></p>
-                  </div>
-                 <div class="col-4 mycontent">
-                  <span class="card-text mb-2 "><b>Back-up</b></span>
-                  <p class="card-text ms-2 mb-0">DJ</p>
-                  <p class="card-text ms-2 mb-0">Jefte</p>
-                  <p class="card-text ms-2 mb-0">Erika</p>
-                  <p class="card-text ms-2 mb-0">Rovic</p>
-                 </div>
-                </div>
-                 
-                </div> 
-              </div>
-        </div>
-          </div>
-        <div class="col-md-6">
-          <div class="card theme text-light m-2 " id="morning" >
-            <div class="card-header d-flex align-items-center justify-content-between d-inline"> Jan 1, 2024 <div> <span>| </span>  SUNDAY MORNING </div> </div>
-            <div class="card-body ">
-              <div class="card p-2 small">
-  
-                <span class="card-text"><b>Song Leader : </b><span>Allan</span></span>
-                <span class="card-text"><b>Media : </b><span>Aila</span></span>
-                <hr>
-                <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-8 ">
-                <span class="card-text mb-2 "><b>Musician : </b></span>
-                <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>DJ</span></p>
-                <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>Jefte</span></p>
-                <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>Erika</span></p>
-                <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>Ephraim</span></p>
-                </div>
-               <div class="col-4 mycontent">
-                <span class="card-text mb-2 "><b>Back-up</b></span>
-                <p class="card-text ms-2 mb-0">DJ</p>
-                <p class="card-text ms-2 mb-0">Jefte</p>
-                <p class="card-text ms-2 mb-0">Erika</p>
-                <p class="card-text ms-2 mb-0">Rovic</p>
-               </div>
-              </div>
-               
-              </div> 
-            </div>
+    <div class="container position-relative align-items-center overlay ">
+      <div class="row" id="get_data">
+        
+        
+
+      
+       
+        
       </div>
-        </div>
-      </div>
+      
         
 
         
       
     </div>
 
-    <button class="btn btn-dark btn-circle m-3 rounded-circle fixed-bottom-right" data-bs-toggle="modal" type="button" data-bs-target="#editModal" title="Add Song">
+    <button class="btn theme btn-circle m-3 rounded-circle fixed-bottom-right adminButton" data-bs-toggle="modal" type="button" data-bs-target="#editModal" title="Add Song"  id="submit">
       <img src="./assets/icon/Plus Math.svg" class="img-fluid rounded-center text-light" alt="">
     </button>
 
@@ -200,16 +90,26 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="editModalLabel">Set Schedule</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title " id="editModalLabel">Set Schedule</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"  id= "modal_close" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form id="form_schedule">
               <div class="mb-2">
-                <label for="leader" class="form-label">Song Leader</label>
-                <input type="text" class="form-control mb-1" name="leader" id="leader" placeholder="Leader" required>
-                
+                <label for="start">Date of Schedule :</label>
+                <input type="date" id="start" name="sched_date" required/>
               </div>
+
+              <div class="form-floating  mb-1">
+                <input type="text" class="form-control" id="song_leader" placeholder="Song Leader" name="song_leader" required/>
+                <label class="form-label" for="floatingInput">Song Leader</label>
+              </div>
+
+              <div class="form-floating  mb-1">
+                <input type="text" class="form-control" id="media" placeholder="Media" name="media" required/>
+                <label class="form-label" for="floatingInput">Media</label>
+              </div>
+
               
               <div class="mb-2">
                 <label for="media" class="form-label">Musician : </label>
@@ -225,10 +125,10 @@
               </div>
               <div class="mb-3">
                 <label for="title" class="form-label">Back-up Singers : </label>
-                <input type="text" class="form-control mb-1">
-                <input type="text" class="form-control mb-1">
-                <input type="text" class="form-control mb-1">
-                <input type="text" class="form-control mb-1">
+                <input type="text" class="form-control mb-1" name="backup1">
+                <input type="text" class="form-control mb-1" name="backup2">
+                <input type="text" class="form-control mb-1" name="backup3">
+                <input type="text" class="form-control mb-1" name="backup4">
               </div>
               
               <button type="submit" class="btn theme text-light">Add Schedule</button>

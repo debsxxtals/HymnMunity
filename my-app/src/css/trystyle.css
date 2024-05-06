@@ -45,6 +45,8 @@ html {
   scroll-behavior: auto;
 }
 
+
+
 body {
   margin: var(--header-height) 0 0 0 !important;
   font-family: var(--body-font) !important;
@@ -377,14 +379,11 @@ thead {
   top: -1px !important;
 }
 
-tbody {
-  max-height: calc(100% - 60px) !important; /* Subtracting the height of the fixed button */
-  overflow-y: auto !important;
-}
+
 
 body {
   height: 100% !important;
-  overflow: hidden !important;
+  overflow: hidden ;
   
 }
 
@@ -560,5 +559,46 @@ section .container1{
 
 .textdr{
   color: #000 !important;
+}
+
+.scrollable-tbody {
+  max-height: 400px;
+   /* Set max height as needed */
+  overflow-y: auto;
+  display: block; /* Important for the tbody to scroll */
+}
+
+.table-container {
+  position: relative;
+  max-height: 400px; /* Set max height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Optional: Add styling for table headers and cells */
+
+
+/* Fix the position of table headers */
+.thead-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #236B72;/* Optional: Set background color to match table container */
+}
+
+
+.table-container {
+  max-height: 480px; /* Set max height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Optional: Add styling for table headers and cells */
+.table-container table {
+  width: 100%;
+  
 }
 

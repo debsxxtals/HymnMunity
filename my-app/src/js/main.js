@@ -64,5 +64,25 @@ function successNotification(message, seconds = 0) {
       }, seconds * 1000);
     }
 }
+// dashboard.js
+
+// Function to toggle button visibility and disable them for non-admin users
+function toggleButtonVisibility(buttonElement, userRole) {
+  // Check if the user has admin role
+  const isAdmin = userRole === "admin";
+
+  // Show or hide the button based on admin status
+  buttonElement.style.display = isAdmin ? "block" : "none";
+
+  // Disable the button for non-admin users
+  if (!isAdmin) {
+      buttonElement.setAttribute("disabled", "disabled");
+  } else {
+      buttonElement.removeAttribute("disabled");
+  }
+}
+
+
+
   
-export { supabase, errorNotification, successNotification };
+export { supabase, errorNotification, successNotification, toggleButtonVisibility };

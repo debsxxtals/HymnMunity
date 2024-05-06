@@ -24,6 +24,7 @@
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/trystyle.css" />
     <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/system/songs.js"></script>
     <meta name="theme-color" content="#31d53d" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet"
@@ -80,27 +81,28 @@
 <br>
 <br>
 <br>
+
+<!--Alert notification-->
+<div class="alert alert-success d-none" role="alert">
+                      
+</div>
+<div class="alert alert-danger d-none" role="alert">
+  
+</div>
       <div class="container mt-4 text-center text-dark dark">
-        <div class="table-responsive " style="position: relative; height: 600px" >
-        <table style="width: 100%">
-          <thead>
+        <div class="table-container" style="position: relative; " >
+        
+          <table style="width: 100%">
+          <thead class="thead-fixed ">
             <tr>
-              <th scope="col" class="text-dark">Song Title</th>
-              <th scope="col" class="text-dark">Family Key</th>
+              <th scope="col" class="text-white">Song Title</th>
+              <th scope="col" class="text-white">Key</th>
             </tr>
           </thead>
-          
+        
             
-            <tbody class="table-group-divider" >
-              <tr>
-                <td>Thank you for the cross Lord</td>
-                <td>F</td>
-              </tr>
-              <tr>
-                <td>Its your blood that cleanses me</td>
-                <td>C</td>
-              </tr>
-              
+            <tbody class="table-group-divider" id="get_data" style="width: 100%;">
+             
             </tbody>
           
         </table>
@@ -109,7 +111,7 @@
         
         
       </div>
-      <button class="btn theme btn-circle m-1 fixed-bottom-right1 rounded-circle" data-bs-toggle="modal" data-bs-target="#editModal" title="Add Song">
+      <button class="btn theme btn-circle m-1 fixed-bottom-right1 rounded-circle adminButton" data-bs-toggle="modal" data-bs-target="#editModal" title="Add Song">
         <img src="./assets/icon/Plus Math.svg" class="img-fluid rounded-center text-light" alt="">
       </button>
 
@@ -118,17 +120,17 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="editModalLabel">Add song list</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" id="modal_close" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form id="editForm">
+              <form id="form_song">
                 <div class="mb-3">
                   <label for="title" class="form-label">Song Title</label>
-                  <input type="text" class="form-control" id="title">
+                  <input type="text" class="form-control" id="title" name="title" required>
                 </div>
                 <div class="mb-3">
                   <label for="key" class="form-label">Family Key Chords</label>
-                  <input type="text" class="form-control" id="key">
+                  <input type="text" class="form-control" id="key" name="key" >
                 </div>
                 <button type="submit" class="btn theme text-light">Add Song</button>
               </form>
