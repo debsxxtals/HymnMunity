@@ -73,8 +73,8 @@
  
     
       <div class="container fixed-top mt-4">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" role="search" id="form_search">
+          <input class="form-control me-2 rounded-pill" name="keyword" type="search" placeholder="Search" aria-label="Search">
           <button class="btn theme rounded-pill text-light" type="submit">Search</button>
         </form>
       </div>
@@ -95,13 +95,13 @@
           <table style="width: 100%">
           <thead class="thead-fixed ">
             <tr>
-              <th scope="col" class="text-white">Song Title</th>
-              <th scope="col" class="text-white">Key</th>
+              <th scope="col" class="text-white rounded">Song Title</th>
+              <th scope="col" class="text-white rounded">Key</th>
             </tr>
           </thead>
         
             
-            <tbody class="table-group-divider" id="get_data" style="width: 100%;">
+            <tbody id="get_data" style="width: 100%;">
              
             </tbody>
           

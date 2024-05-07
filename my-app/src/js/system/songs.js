@@ -16,8 +16,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 getDatas();
 
+//search form
+const form_search = document.getElementById("form_search");
 
+form_search.onsubmit = async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(form_search);
+    getDatas(formData.get("keyword"));
 
+    form_search.reset();
+}
 
 const form_song = document.getElementById("form_song");
 
@@ -67,20 +76,23 @@ form_song.onsubmit = async (e) => {
 
 }
 
-async function getDatas() {
+async function getDatas(keyword = "") {
     //get all rows
     
     
     let { data: songs, error } = await supabase
         .from('songs')
-        .select('*');
+        .select('*')
+        .or("title.ilike.%" + keyword + "%, key.ilike.%" + keyword + "%");
+        
+        
     //temporary storage for html elements and each item
     let container = "";
     //get each item and interpolate with html elements
     songs.forEach((item) => {
     container += ` <tr style="max-width: 100% !important; class="mx-5" data-id = "${item.id}">
-    <td style="max-width: 95%  !important;" class="text-start">${item.title}</td>
-    <td style="max-width: 5%  !important;" class="text-center " >${item.key}</td>
+    <td style="max-width: 95%  !important;" class="text-start p-2">${item.title}</td>
+    <td style="max-width: 5%  !important;" class="text-center  " >${item.key}</td>
   </tr>`
         
     });
