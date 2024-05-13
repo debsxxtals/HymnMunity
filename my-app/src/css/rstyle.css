@@ -1,6 +1,7 @@
 body{
-    background: #b0e0e6 !important;
-    
+    /* background: #b0e0e6 !important; */
+    background-repeat: no-repeat;
+    background-image: url(./bg.png) !important;
   }
 
 a{

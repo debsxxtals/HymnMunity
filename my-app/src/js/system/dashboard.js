@@ -14,16 +14,31 @@ form_announcement.onsubmit = async (e) => {
      ).innerHTML = `<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
       <span role="status">Loading...</span>`;
     
+    const userId = localStorage.getItem('userId');
+    let { data: profiles, errorer } = await supabase
+    .from('profiles')
+    .select('id')
+    .eq("auth_id",userId)
+        
+    const id = profiles[0].id; 
+
     // Get All values from input, select, textarea under form tag
-  const formData = new FormData(form_announcement);
+    const formData = new FormData(form_announcement);
   
     const { data, error } = await supabase
       .from("announcements")
-      .update({
+        .update({
+    
         title: formData.get("title"),
         body: formData.get("body"),
+        user_id: id
         
-      })
+        })
+        
+
+      
+
+        
       .eq("id", for_update)
       .select();
 
@@ -81,7 +96,6 @@ async function getDatas() {
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editModal" data-id="${element.id}">Edit</a></li>
-                    <li><a class="dropdown-item" href="#"  data-id="${element.id}">Hide</a></li>
                 </ul>
             </div>
         </div>

@@ -40,6 +40,14 @@ form_song.onsubmit = async (e) => {
      ).innerHTML = `<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
       <span role="status">Loading...</span>`;
     const formData = new FormData(form_song);
+    
+    const userId = localStorage.getItem('userId');
+    let { data: profiles, errorer } = await supabase
+    .from('profiles')
+    .select('id')
+    .eq("auth_id",userId)
+        
+    const id = profiles[0].id; 
 
     // //input data supabase
     const { data, error } = await supabase
@@ -48,6 +56,7 @@ form_song.onsubmit = async (e) => {
         {
             title: formData.get("title"),
             key: formData.get("key"),
+            user_id: id
             
         },
     ])
@@ -93,6 +102,7 @@ async function getDatas(keyword = "") {
     container += ` <tr style="max-width: 100% !important; class="mx-5" data-id = "${item.id}">
     <td style="max-width: 95%  !important;" class="text-start p-2">${item.title}</td>
     <td style="max-width: 5%  !important;" class="text-center  " >${item.key}</td>
+   
   </tr>`
         
     });

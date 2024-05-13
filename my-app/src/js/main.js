@@ -79,7 +79,7 @@ function toggleButtonVisibility(buttonElement, userRole) {
       buttonElement.setAttribute("disabled", "disabled");
   } else {
       buttonElement.removeAttribute("disabled");
-  }
+  } 
 }
 
 

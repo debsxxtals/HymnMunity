@@ -1,4 +1,4 @@
-/*=============== GOOGLE FONTS ===============*/
+/*=============== GOOGtE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
@@ -602,3 +602,9 @@ section .container1{
   
 }
 
+.ex3 {
+  outline: 1px solid #236B72 ;
+  border-radius: 10px;
+  text-align: center;
+  height: 100px;
+}

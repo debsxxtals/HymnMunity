@@ -5,13 +5,13 @@ const register = document.getElementById("register");
 register.onsubmit = async (e) => {
     e.preventDefault();
 
+    
     //disable button
     document.querySelector("#register button").disabled = true;
     document.querySelector(
-      "#register button"
-    ).innerHTML = `<div class="spinner-border  me-2" role="status">
-    </div>
-                      <span>Loading...</span>`;
+        "#register button"
+    ).innerHTML = `<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+     <span role="status">Loading...</span>`;
 
     //get all values from input, select, textarea form tag
     const formData = new FormData(register);
@@ -26,7 +26,7 @@ register.onsubmit = async (e) => {
         //Store into variable the ser
         let user_id = data.user.id
 
-
+      
         //Check if user_id does exist; registered
         if (user_id != null) {
             
@@ -34,7 +34,7 @@ register.onsubmit = async (e) => {
                 .from('profiles')
                 .insert([
                     {
-                        first_name: formData.get("first_name"), last_name: formData.get("last_name"),
+                        first_name: formData.get("first_name"),
                         last_name: formData.get("last_name"), cellphone_no: formData.get("cellphone_no"), auth_id: user_id,
                     },
                 ])
@@ -54,7 +54,8 @@ register.onsubmit = async (e) => {
              // Enable Submit Button
             document.querySelector("#register button").disabled = false;
             document.querySelector("#register button").innerHTML = `Register`;
-                
+            
+            
         
         }
         

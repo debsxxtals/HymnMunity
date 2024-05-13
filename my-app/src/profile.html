@@ -122,14 +122,14 @@
       <div class="d-flex align-items-center">
 
           <div class="image">
-      <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="125" height="150">
+      <img src="" class="rounded" width="125" height="150">
       </div>
 
       <div class="ml-3 w-100 ms-3">
           
-         <h6 class="mb-0 mt-3 text-dark mb-0"><strong> Deborah Talaba</strong></h6>
+         <h6 class="mb-0 mt-3 text-dark mb-0"><strong id="first_name"></strong> <strong id="last_name"></strong></h6>
          
-         <span class="text-dark"><small> (Deb)</small></span>
+         <span class="text-dark"><small><span id="get_nickname"></span></small></span>
          <br>
          <br> 
          <button type="button" class="btn theme text-light btn-sm mt-2" data-bs-toggle="modal"  data-bs-target="#editModal"> <i class="bi bi-pencil-fill me-1"></i> Edit Profile</button>
@@ -151,20 +151,25 @@
 </div>
 
 
-<div class="container-fluid  mt-4 mb-4 d-flex justify-content-center overlay "> 
-  <div class="card p-4 theme text-light " style="width: 100%;"> 
-    <h6>ABOUT ME</h6>
+<div class="container-fluid  mt-4 mb-4 d-flex justify-content-center "> 
+  <div class="card p-4 theme text-light scrollable-tbody " style="width: 100%;"> 
+    <h6 class="mb-2" >ABOUT ME</h6>
     <div class="card p-3">
-      <p  class="card-title fw-bold mb-2 mt-1">Contact Info :</p>
       
-        <span class="p-1"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="card-text ms-2"> : example@email.com</span></span>
-        <span class="p-1"><i class="fa fa-phone" aria-hidden="true"></i><span class="card-text ms-2"> : +639123456789 </span></span>
+      <p  class="card-title fw-bold mb-2 mt-1">Contact Info </p>
+      
+        <span class="p-1"><i class="fa fa-envelope" aria-hidden="true"> : </i> <span class="card-text ms-2" id="get_email"> </span></span>
+        <span class="p-1"><i class="fa fa-phone" aria-hidden="true"> : </i><span class="card-text ms-2" id="get_cellphone"></span></span>
 
-      <p  class="card-title fw-bold mb-2 mt-3">Place :</p>
+      <p  class="card-title fw-bold mb-2 mt-3">Place </p>
       
-        <span class="p-1"><i class="fa fa-map-marker" aria-hidden="true"></i> <span class="card-text ms-2"> : Washington D.C. USA</span></span>
+        <span class="p-1"><i class="fa fa-map-marker" aria-hidden="true"> : </i> <span class="card-text ms-2" id="get_address"> </span></span>
         
+        
+    </div>
 
+    <div class="card p-3 mt-4 mb-4">
+      <p class="card-body ex3 mt-3" id="description"> </p>
     </div>
     <br>
     <br>
@@ -178,21 +183,33 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="editModalLabel">Edit Profile</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" id="modal_close" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="editForm">
+        <form id="form_profile">
           <div class="mb-3">
             <label for="profile" class="form-label">Change profile picture</label>
-            <input type="file" accept="image/*" name="file" class="form-control" id="profile"/>
+            <input type="file" accept="image/*" name="image_path" class="form-control" />
           </div>
           <div class="mb-3">
             <label for="nickname" class="form-label">Nickname</label>
-            <input type="text" class="form-control" id="nickname">
+            <input type="text" class="form-control" id="nickname" name="nickname">
           </div>
           <div class="mb-3">
-            <label for="body" class="form-label">About me</label>
-            <textarea class="form-control" id="body" rows="3"></textarea>
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="cellphone_no" class="form-label">Contact Number</label>
+            <input type="number" class="form-control" id="cellphone_no" name="cellphone_no">
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" name="address">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">About me</label>
+            <textarea class="form-control" id="description" rows="3" name="description"></textarea>
           </div>
           <button type="submit" class="btn text-light theme">Save Changes</button>
         </form>
