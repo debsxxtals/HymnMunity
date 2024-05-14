@@ -103,7 +103,10 @@ async function getDatas(order = 'desc') {
     } else {
         updateContainer(schedules);
     }
-}
+}const userRole = localStorage.getItem("role");
+
+// Check if the user has admin role
+const isAdmin = userRole === "admin";
 
 function updateContainer(schedules) {
     let container = "";
@@ -115,11 +118,13 @@ function updateContainer(schedules) {
         container += `<div class="col-md-6">
             <div class="card theme text-light m-2" data-id="${item.id}">
                 <div class="card-header d-flex align-items-center justify-content-between d-inline"> ${formattedDate} <span>|</span> ${dayOfWeek}
-                    <div class="dropdown float-end">
-                        <a class="btn dropdown-toggle text-light btn-sm" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                   
+                    <div class="dropdown float-end " >
+                    <button class="btn dropdown-toggle text-light btn-sm adminButton" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" id="btn_delete" data-id="${item.id}">Delete</a></li>
+                            <li><a class="dropdown-item " href="#" id="btn_delete" data-id="${item.id}">Delete</a></li>
                         </ul>
+                    </button>
                     </div>
                 </div>
                 <div class="card-body">
@@ -150,6 +155,15 @@ function updateContainer(schedules) {
     });
 
     document.getElementById("get_data").innerHTML = container;
+
+     // Disable buttons if user is not an admin
+     if (!isAdmin) {
+        const adminButtons = document.querySelectorAll(".adminButton");
+        adminButtons.forEach(button => {
+            toggleButtonVisibility(button, userRole);
+        });
+    }
+
 
     // Add event listener for delete buttons
     document.querySelectorAll("#btn_delete").forEach((item) => {

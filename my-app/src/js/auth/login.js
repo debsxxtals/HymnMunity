@@ -44,6 +44,9 @@ form_login.onsubmit = async (e) => {
         localStorage.setItem("role", profiles[0].role);
     
 
+    } else {
+        errorNotification("Something wrong happened. Cannot login account.", 10);
+        console.log(error);
     }
     
 
