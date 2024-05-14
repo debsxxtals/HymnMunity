@@ -87,16 +87,16 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-dark">
           <li class="nav-item">
-            <a class="nav-link text-dark" aria-current="page" href="dashboard.html">Home</a>
+            <a class="nav-link text-dark" aria-current="page" href="#">Terms of Service</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link  text-dark" aria-current="page" href="#" >About</a>
+          <li class="nav-item mt-2">
+            <a class="nav-link  text-dark" aria-current="page" href="#" >About Us</a>
           </li>
           
-          <li class="nav-item my-3 mt-2">
+          <li class="nav-item my-3 mt-5">
             <hr>
             <a class="nav-link  text-dark" id="btn_logout">
-              <button class="btn theme w-100 text-light">Log out</button> </a>
+              <button class="btn theme w-100 text-light">Log out <i class='bx bx-log-in'></i></button> </a>
           </li>
         
         </ul>
@@ -122,7 +122,7 @@
       <div class="d-flex align-items-center">
 
           <div class="image">
-      <img src="" class="rounded" width="125" height="150">
+      <img src="" id="image" class="rounded" width="125" height="150">
       </div>
 
       <div class="ml-3 w-100 ms-3">
@@ -207,10 +207,7 @@
             <label for="address" class="form-label">Address</label>
             <input type="text" class="form-control" id="address" name="address">
           </div>
-          <div class="mb-3">
-            <label for="description" class="form-label">About me</label>
-            <textarea class="form-control" id="description" rows="3" name="description"></textarea>
-          </div>
+          
           <button type="submit" class="btn text-light theme">Save Changes</button>
         </form>
       </div>

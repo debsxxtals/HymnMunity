@@ -43,7 +43,7 @@ form_announcement.onsubmit = async (e) => {
       .select();
 
     if (error == null) {
-      successNotification("Announcement Successfully Updated!", 10);
+      successNotification("Announcement Successfully Updated!", 5);
 
       // Reset storage id
       for_update = "";
@@ -51,7 +51,7 @@ form_announcement.onsubmit = async (e) => {
       // Reload Datas
       getDatas();
     } else {
-      errorNotification("Something wrong happened. Cannot add item.", 15);
+      errorNotification("Something wrong happened. Cannot edit announcement.", 10);
       console.log(error);
     }
 

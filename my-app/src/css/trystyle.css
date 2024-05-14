@@ -267,7 +267,9 @@ body{
 .card .card-body{
   width: 80% !important;
 }
-
+.border {
+  outline: 2px solid #236B72;
+}
 .bi-three-dots {
   background-color: transparent;
   border: none;
@@ -607,4 +609,9 @@ section .container1{
   border-radius: 10px;
   text-align: center;
   height: 100px;
+}
+
+.hey {
+  text-shadow: 2px 2px 5px #236B72;
+
 }

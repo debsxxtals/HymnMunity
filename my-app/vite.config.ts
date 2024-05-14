@@ -17,7 +17,7 @@ export default defineConfig({
         chatbox: resolve(__dirname, 'src/chatbox.html'),
         profile: resolve(__dirname, 'src/profile.html'),
         schedule: resolve(__dirname, 'src/tryschedule.html'), 
-
+        attendance: resolve(__dirname, 'src/attendance.html')
       },
     }
   },

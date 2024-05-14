@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("latest").addEventListener("click", () => sortData('desc'));
+    document.getElementById("oldest").addEventListener("click", () => sortData('asc'));
+
+    getDatas(); // Initial data load
+});
 
 getDatas();
 
@@ -86,26 +92,28 @@ form_schedule.onsubmit = async (e) => {
 
 };
 
-async function getDatas() {
-    let currentDate = new Date();
-    //get all rows
+async function getDatas(order = 'desc') {
     let { data: schedules, error } = await supabase
         .from('schedules')
         .select('*')
-       // .eq('sched_date', currentDate)
-       // .gt('sched_date', currentDate)
-       // .lt('sched_date', currentDate)
-    //temporary storage for html elements and each item
-    let container = "";
-    
-    //get each item and interpolate with html elements
-    schedules.forEach((item) => {
-        let schedDate = new Date(item.sched_date); // Convert the scheduled date to a Date object
-        let dayOfWeek = schedDate.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();  // Get the day of the week as a string
-        let formattedDate = schedDate.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }); // Format date to "Jan 11, 2004"
+        .order('sched_date', { ascending: order === 'asc' });
 
-        container += `<div class="col-md-6 " >
-            <div class="card theme text-light m-2"  data-id=" ${item.id}">
+    if (error) {
+        console.error(error);
+    } else {
+        updateContainer(schedules);
+    }
+}
+
+function updateContainer(schedules) {
+    let container = "";
+    schedules.forEach((item) => {
+        let schedDate = new Date(item.sched_date);
+        let dayOfWeek = schedDate.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
+        let formattedDate = schedDate.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+
+        container += `<div class="col-md-6">
+            <div class="card theme text-light m-2" data-id="${item.id}">
                 <div class="card-header d-flex align-items-center justify-content-between d-inline"> ${formattedDate} <span>|</span> ${dayOfWeek}
                     <div class="dropdown float-end">
                         <a class="btn dropdown-toggle text-light btn-sm" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
@@ -120,15 +128,15 @@ async function getDatas() {
                         <span class="card-text"><b>Media : </b><span>${item.media}</span></span>
                         <hr>
                         <div class="row d-flex justify-content-center align-items-center">
-                            <div class="col-8 ">
-                                <span class="card-text mb-2 "><b>Musician : </b></span>
+                            <div class="col-8">
+                                <span class="card-text mb-2"><b>Musician : </b></span>
                                 <p class="card-text ms-1 mb-0"><b>Guitarist : </b><span>${item.guitarist}</span></p>
                                 <p class="card-text ms-1 mb-0"><b>Bassist : </b><span>${item.bassist}</span></p>
                                 <p class="card-text ms-1 mb-0"><b>Keyboardist : </b><span>${item.keyboardist}</span></p>
                                 <p class="card-text ms-1 mb-0"><b>Drummer : </b><span>${item.drummer}</span></p>
                             </div>
                             <div class="col-4 mycontent">
-                                <span class="card-text mb-2 "><b>Back-up</b></span>
+                                <span class="card-text mb-2"><b>Back-up</b></span>
                                 <p class="card-text ms-2 mb-0">${item.backup1}</p>
                                 <p class="card-text ms-2 mb-0">${item.backup2}</p>
                                 <p class="card-text ms-2 mb-0">${item.backup3}</p>
@@ -140,16 +148,18 @@ async function getDatas() {
             </div>
         </div>`;
     });
-    
-    //assign container to the element to be displayed
+
     document.getElementById("get_data").innerHTML = container;
-    
+
     // Add event listener for delete buttons
     document.querySelectorAll("#btn_delete").forEach((item) => {
         item.addEventListener("click", deleteAction);
     });
 }
 
+async function sortData(order) {
+    getDatas(order);
+}
 
 
 

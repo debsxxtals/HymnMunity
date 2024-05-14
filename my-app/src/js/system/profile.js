@@ -1,5 +1,6 @@
 import { supabase, successNotification, errorNotification } from "../main";
 
+
 const btn_logout = document.getElementById("btn_logout");
 btn_logout.onclick = async () => {
     
@@ -290,7 +291,7 @@ getDatas();
 
 // // // // // Call the fetchUserProfile function when the page loads
 // // // // window.onload = fetchUserProfile;
-
+getDatas();
 async function getDatas() {
     // Get user ID from localStorage
     const userId = localStorage.getItem('userId');
@@ -301,19 +302,29 @@ async function getDatas() {
         .select('*')
         .eq('auth_id', userId)
         .single();
-
+        if (error == null) {
+          // Set values to the corresponding elements
+          document.getElementById("first_name").textContent = profiles.first_name;
+          document.getElementById('last_name').textContent = profiles.last_name;
+          document.getElementById('get_nickname').textContent = profiles.nickname;
+          document.getElementById('get_address').textContent = profiles.address;
+          document.getElementById('get_email').textContent = profiles.email;
+          document.getElementById('get_cellphone').textContent = profiles.cellphone_no;
+          
+          // Display the image if the path exists
+          const imgElement = document.getElementById('image');
+          const url_image = "https://ycflgvnjrstfwqyvblvq.supabase.co/storage/v1/object/public/profiles_image/";
+          const full_image_url = profiles.image_path ? `${url_image}${profiles.image_path}` : null;
+          
+          if (full_image_url) {
+              imgElement.src = full_image_url;
+          }
+      } else {
+          console.log(error);
+      }
         
-    if (error == null) {
-        // Set values to the corresponding elements
-        document.getElementById("first_name").textContent = profiles.first_name;
-        document.getElementById('last_name').textContent = profiles.last_name;
-        document.getElementById('get_nickname').textContent = profiles.nickname;
-        document.getElementById('get_address').textContent = profiles.address;
-        document.getElementById('get_email').textContent = profiles.email;
-        document.getElementById('get_cellphone').textContent = profiles.cellphone_no;
-    } else {
-        console.log(error);
-    }
+    
+
 }
 
 // Submit Form Functionality; Both Functional for Create and Update
