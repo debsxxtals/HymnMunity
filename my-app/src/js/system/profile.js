@@ -9,7 +9,7 @@ btn_logout.onclick = async () => {
     localStorage.clear()
 
     if (error == null) {
-        successNotification("Logout Successfully");
+        alert("Logging out...")
         //clear local storage
         localStorage.clear();
 
@@ -379,7 +379,7 @@ form_profile.onsubmit = async (e) => {
       .select();
     
       if (error == null) {
-        successNotification("Item Successfully Updated!", 15);
+       alert("Profile Successfully Updated!")
     
         
     
